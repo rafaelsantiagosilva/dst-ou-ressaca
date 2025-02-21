@@ -17,7 +17,7 @@ export function Hamburguer({ isOpen, setIsOpen }: HamburguerProps) {
 				{isOpen ? <HiX size={30} /> : <HiMenu size={30} />}
 			</button>
 			{isOpen && (
-				<nav className="absolute top-16 left-0 w-full bg-slate-50 shadow-md flex flex-col gap-4 p-4 md:hidden">
+				<nav className="absolute top-14 left-0 w-full bg-slate-50 shadow-md flex flex-col gap-4 p-4 md:hidden">
 					<Link
 						href={'/'}
 						className="hover:underline w-full border-y py-4"

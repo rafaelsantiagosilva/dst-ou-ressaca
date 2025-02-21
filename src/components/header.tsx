@@ -9,7 +9,7 @@ export function Header() {
 	const [isOpen, setIsOpen] = useState(false);
 
 	return (
-		<header className="w-screen shadow-md h-16 flex items-center justify-between px-4 text-2xl font-semibold bg-slate-50">
+		<header className="w-screen shadow h-14 flex items-center justify-between px-7 text-lg font-semibold bg-slate-50">
 			<Link href={'/'}>DST ou Ressaca?</Link>
 
 			<nav className="hidden md:flex gap-4">
@@ -19,9 +19,10 @@ export function Header() {
 				<Link href={'/'} className="hover:underline">
 					Diagnóstico Profissional
 				</Link>
-				<Link href={'/'} className="flex items-center hover:underline">
+				<Link href={'/'} className="flex items-center hover:underline gap-1">
+					<AiFillAlert className="text-red-500" size={20} />
 					SOS Farmácias
-					<AiFillAlert className="text-red-500" size={30} />
+					<AiFillAlert className="text-red-500" size={20} />
 				</Link>
 			</nav>
 
