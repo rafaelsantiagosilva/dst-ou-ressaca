@@ -21,9 +21,9 @@ const buttonVariants = cva(
 				ghost: 'hover:bg-accent hover:text-accent-foreground',
 				link: 'text-primary underline-offset-4 hover:underline',
 				amber:
-					'text-2xl text-slate-100 bg-amber-500 hover:bg-amber-400 font-semibold w-36 active:border-r-4 active:border-b-4',
+					'text-2xl text-slate-100 bg-amber-500 hover:bg-amber-400 font-semibold active:border-r-4 active:border-b-4',
 				green:
-					'text-2xl text-slate-100 bg-green-500 hover:bg-green-400 font-semibold w-36 active:border-r-4 active:border-b-4',
+					'text-2xl text-slate-100 bg-green-500 hover:bg-green-400 font-semibold active:border-r-4 active:border-b-4',
 			},
 			size: {
 				default: 'h-10 p-6',

@@ -1,13 +1,13 @@
+'use client';
+
 import Link from 'next/link';
+import { useState } from 'react';
 import { AiFillAlert } from 'react-icons/ai';
-import { HiX, HiMenu } from 'react-icons/hi';
+import { HiMenu, HiX } from 'react-icons/hi';
 
-interface HamburguerProps {
-	isOpen: boolean;
-	setIsOpen: (isOpen: boolean) => void;
-}
+export function Hamburguer() {
+	const [isOpen, setIsOpen] = useState(false);
 
-export function Hamburguer({ isOpen, setIsOpen }: HamburguerProps) {
 	return (
 		<>
 			<button
@@ -23,17 +23,10 @@ export function Hamburguer({ isOpen, setIsOpen }: HamburguerProps) {
 						className="hover:underline w-full border-y py-4"
 						onClick={() => setIsOpen(false)}
 					>
-						Sobre
-					</Link>
-					<Link
-						href={'/'}
-						className="hover:underline w-full border-y py-4"
-						onClick={() => setIsOpen(false)}
-					>
 						Diagnóstico Profissional
 					</Link>
 					<Link
-						href={'/'}
+						href={'/pharmacies'}
 						className="flex items-center hover:underline w-full border-y py-4"
 						onClick={() => setIsOpen(false)}
 					>
