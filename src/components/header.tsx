@@ -8,7 +8,7 @@ export function Header() {
 			<Link href={'/'}>DST ou Ressaca?</Link>
 
 			<nav className="hidden md:flex gap-4">
-				<Link href={'/'} className="hover:underline">
+				<Link href={'/diagnosis'} className="hover:underline">
 					Diagnóstico Profissional
 				</Link>
 				<Link

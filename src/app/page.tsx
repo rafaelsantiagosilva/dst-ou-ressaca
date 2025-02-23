@@ -5,33 +5,32 @@ import carnavalKiss from '@/assets/carnaval-just-dance.png';
 import condomAdvertence from '@/assets/condom-advertence.png';
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
+import { OnLoadConfetti } from '@/components/onloadConfetti';
 import { Button } from '@/components/ui/button';
 import confetti from 'canvas-confetti';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect } from 'react';
 
 export default function Home() {
-	useEffect(() => {
-		// Confete ao carregar a página
-		confetti({
-			particleCount: 200,
-			spread: 100,
-			origin: { y: 0.6 },
-		});
-	}, []);
+	const triggerConfetti = (color: 'green' | 'yellow') => {
+		let colors: string[] = [];
 
-	const triggerConfetti = () => {
+		if (color == 'green')
+			colors = ['#0AFF54', '#47FF7E', '#70FF96', '#85FFA1', '#B1FFBD', '#BEF9C7'];
+		else if (color == 'yellow')
+			colors = ['#FFD500', '#FFDF47', '#FFE770', '#FFED85', '#FFF3B1', '#FFF7BE'];
+
 		confetti({
 			particleCount: 150,
 			spread: 120,
 			origin: { y: 0.6 },
-			colors: ['#FF0A54', '#FF477E', '#FF7096', '#FF85A1', '#FBB1BD', '#F9BEC7'],
+			colors,
 		});
 	};
 
 	return (
 		<>
+			<OnLoadConfetti />
 			<Header />
 			<main>
 				<div className="w-screen shadow h-80 bg-amber-500 flex flex-row-reverse items-center justify-around px-8 py-2">
@@ -54,8 +53,15 @@ export default function Home() {
 							Clique aqui abaixo para começar seu diagnóstico. Fique tranquilo, seus
 							dados só são compartilhados com profissionais
 						</p>
-						<Button variant={'green'} onClick={triggerConfetti}>
-							Iniciar 🎉
+						<Button variant={'green'} asChild>
+							<Link
+								href={'/diagnosis/1'}
+								onClick={() => {
+									triggerConfetti('yellow');
+								}}
+							>
+								Iniciar 🎉
+							</Link>
 						</Button>
 					</div>
 					<Image
@@ -72,7 +78,14 @@ export default function Home() {
 							de você?
 						</p>
 						<Button className="w-auto text-lg md:text-2xl" variant={'amber'} asChild>
-							<Link href={'/pharmacies'}>Farmácias 📌</Link>
+							<Link
+								href={'/pharmacies'}
+								onClick={() => {
+									triggerConfetti('green');
+								}}
+							>
+								Farmácias 📌
+							</Link>
 						</Button>
 					</div>
 					<Image
