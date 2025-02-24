@@ -19,7 +19,7 @@ export function Hamburguer() {
 			{isOpen && (
 				<nav className="absolute top-14 left-0 w-full bg-slate-50 shadow-md flex flex-col gap-4 p-4 md:hidden">
 					<Link
-						href={'/diagnosis'}
+						href={'/diagnosis/1'}
 						className="hover:underline w-full border-y py-4"
 						onClick={() => setIsOpen(false)}
 					>

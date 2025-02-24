@@ -24,6 +24,7 @@ const buttonVariants = cva(
 					'text-2xl text-slate-100 bg-amber-500 hover:bg-amber-400 font-semibold active:border-r-4 active:border-b-4',
 				green:
 					'text-2xl text-slate-100 bg-green-500 hover:bg-green-400 font-semibold active:border-r-4 active:border-b-4',
+				red: 'text-2xl text-slate-100 bg-red-500 hover:bg-red-500 font-semibold active:border-r-4 active;border-b-4',
 			},
 			size: {
 				default: 'h-10 p-6',

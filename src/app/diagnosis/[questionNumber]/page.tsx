@@ -1,8 +1,9 @@
 import NotFound from '@/app/not-found';
-import { questions } from '@/data/questions';
-import { Question } from './question';
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
+import { questions } from '@/data/questions';
+import { Question } from './question';
+import { Results } from './results';
 
 interface DiagnosisPageProps {
 	params: Promise<{
@@ -12,6 +13,9 @@ interface DiagnosisPageProps {
 
 export default async function Diagnosis({ params }: DiagnosisPageProps) {
 	const { questionNumber } = await params;
+
+	if (questionNumber === 'results') return <Results />;
+
 	const questionNumberInt = Number.parseInt(questionNumber);
 	const question = questions[questionNumberInt];
 

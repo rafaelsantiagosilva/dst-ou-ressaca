@@ -60,7 +60,7 @@ export default function Home() {
 									triggerConfetti('yellow');
 								}}
 							>
-								Iniciar 🎉
+								Iniciar &#127881;
 							</Link>
 						</Button>
 					</div>
@@ -84,7 +84,7 @@ export default function Home() {
 									triggerConfetti('green');
 								}}
 							>
-								Farmácias 📌
+								Farmácias &#128204;
 							</Link>
 						</Button>
 					</div>
