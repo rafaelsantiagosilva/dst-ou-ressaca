@@ -1,6 +1,10 @@
+'use client';
+
 import { Header } from '@/components/header';
-import { Map } from './map';
 import { Footer } from '@/components/footer';
+import dynamic from 'next/dynamic';
+
+const DynamicMap = dynamic(() => import('./map'), { ssr: false });
 
 export default function Pharmacies() {
 	return (
@@ -8,9 +12,8 @@ export default function Pharmacies() {
 			<Header />
 			<main className="p-4">
 				<h1 className="text-2xl font-bold text-center mb-4">Farmácias próximas</h1>
-				<Map
-					center={[-23.008011229111542, -46.84634048809668]}
-					userPosition={[-23.008011229111542, -46.84634048809668]}
+				<DynamicMap
+					center={[-23.550164466, -46.633664132]} // Praça da Sé
 					zoom={15}
 				/>
 			</main>
