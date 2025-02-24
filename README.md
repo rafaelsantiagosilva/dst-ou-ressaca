@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎉 DST ou Ressaca?
 
-## Getting Started
+🔗 Link do projeto (inexistente por hora)
 
-First, run the development server:
+## ℹ️ Sobre
+
+O projeto consiste em uma ferramente que pode ser muito útil em tempos de Carnaval: um site que faz um diagnóstico e descobre se você possui uma DST ou uma ressaca. Além disso, para facilitar ainda mais, possui um mapa que mostra as farmácias próximas de você
+
+### 🏠 Página inicial
+
+![Página principal](./home.png)
+
+### 🩺 Primeira pergunta do diagnóstico
+
+![Primeira pergunta do diagnóstico](./diagnosis-one.png)
+
+### 📍 Farmácias próximas de você (Ex: Praça da Sé)
+
+![Farmácias próximas da Praça da Sé](./map.png)
+
+## 🛠️ Stack
+
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+
+### 🔨 Demais tecnologias
+
+canvas-confetti: [https://github.com/catdad/canvas-confetti#readme](https://github.com/catdad/canvas-confetti#readme)
+overpass-api: [https://wiki.openstreetmap.org/wiki/Overpass_API](https://wiki.openstreetmap.org/wiki/Overpass_API)
+
+## 👨‍💻 Como executar?
+
+### ⬇️ Instale o Node.js
+
+[Baixar o Node.js aqui!](https://nodejs.org/pt/download)
+
+### ⬇️ Instale o PNPM
+
+[Baixe o pnpm aqui!](https://pnpm.io/installation)
+
+### 📂 Clone o repositório
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/rafaelsantiagosilva/dst-ou-ressaca.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### ⬇️ Instale as dependências
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Abra a pasta do projeto no terminal
+- Rode o seguinte comando:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+pnpm install
+```
 
-## Learn More
+### ⌨️ Rode os comandos...
 
-To learn more about Next.js, take a look at the following resources:
+```shell
+pnpm build
+pnpm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🌐 Abra no navegador...
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[http://localhost:3000](http://localhost:3000)
